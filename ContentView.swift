@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var purchasePrice: Double = 100_000
-    @State private var downPayment: Double = 20_000
-    @State private var repaymentTime: Double = 25
-    @State private var interestRate: Double = 3
+    @AppStorage("purchasePrice") private var purchasePrice: Double = 100_000
+    @AppStorage("downPayment") private var downPayment: Double = 20_000
+    @AppStorage("repaymentTime") private var repaymentTime: Double = 25
+    @AppStorage("interestRate") private var interestRate: Double = 3
     
     var monthlyPayment: Double {
         let interestAsDecimal = (interestRate / 100) / 12.0
